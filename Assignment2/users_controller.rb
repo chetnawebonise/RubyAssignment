@@ -30,20 +30,36 @@ class Users
   end
 
   def callActions(prod, option)
-    case option
-    when 1
-      #add product
-      prod.addProduct
+    if @user == 1
+      case option
+      when 1
+        #add product
+        prod.addProduct
 
-    when 4
-      #list product
-      puts("All Products list")
-      prod.read("inventory.txt", 'list', '')
+      when 4
+        #list product
+        puts("All Products list")
+        prod.read("inventory.txt", 'list', '')
 
-    when 5
-      #search product
-      prod.searchproduct
+      when 5
+        #search product
+        prod.searchProduct
 
+      else
+        puts "Invalid Option"
+      end
+    elsif @user == 2
+      case option
+      when 1
+        puts("All Products list")
+        prod.read("inventory.txt", 'list', '')
+
+      when 2
+        prod.searchProduct
+
+      when 3
+        prod.buy
+      end
     end
   end
 end

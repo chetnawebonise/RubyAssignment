@@ -14,7 +14,7 @@ module FileOperations
 
         if line[0, pos] == "Name"
           if action == 'list'
-            puts line[pos+1, line.length]
+            puts prod
           elsif action == 'search'
             if line.index(str) != ""
               prodDetail = prod
