@@ -30,7 +30,7 @@ class Products
     self.read("inventory.txt", 'search', 'c')
   end
 
-  def buy
+  def buyProduct
     puts "Select id for desired product"
     self.read("inventory.txt", 'list', '')
 

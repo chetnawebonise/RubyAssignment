@@ -16,6 +16,7 @@ module FileOperations
           if action == 'list'
             puts prod
           elsif action == 'search'
+            puts line.index(str)
             if line.index(str) != ""
               prodDetail = prod
               puts prodDetail

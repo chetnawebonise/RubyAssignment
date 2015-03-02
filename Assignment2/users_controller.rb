@@ -58,7 +58,10 @@ class Users
         prod.searchProduct
 
       when 3
-        prod.buy
+        prod.buyProduct
+
+      else
+        puts "Invalid Option"
       end
     end
   end
